@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# B2Brain Frontend Challenge
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
