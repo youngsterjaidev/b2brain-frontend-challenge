@@ -117,6 +117,17 @@ const Li = styled.li`
   }
 `;
 
+const AltLogo = styled.div`
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 2px;
+  font-size: 1.5rem;
+  background-color: #ff6059;
+  color: #fff;
+`;
+
 interface Props {
   result: [] | any[];
   setResult: any;
@@ -151,7 +162,11 @@ const Dashboard: React.FC<Props> = ({ result, setResult }) => {
             {result.map((company, index) => (
               <Card key={index}>
                 <div>
-                  <Img src={company.logo || Company_Logo} alt="" />
+                  {company.logo ? (
+                    <Img src={company.logo} alt="" />
+                  ) : (
+                    <AltLogo>H</AltLogo>
+                  )}
                 </div>
                 <div>
                   <div>
